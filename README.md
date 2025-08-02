@@ -72,22 +72,23 @@ python app.py
 
 \`\`\`
 credit-card-fraud-detection/
-├── README.md                 # Project documentation
-├── requirements.txt          # Python dependencies
-├── runtime.txt               # Python version for deployment
-├── .gitignore               # Git ignore file
-├── app.py                   # Flask web application
-├── fraud_detection_ml.py    # ML model training script
+├── README.md                 # 📘 Project documentation  
+├── requirements.txt          # 📦 Python dependencies  
+├── runtime.txt               # 🔄 Python version for deployment  
+├── .gitignore                # 🙈 Files to ignore in Git  
+├── app.py                    # 🚀 Flask web application  
+├── fraud_detection_ml.py     # 🤖 ML model training script  
 ├── templates/
-│   └── index.html          # Web interface template
-├── static/
-│   ├── style.css           # Stylesheet
-│   └── script.js           # JavaScript functionality
-├── models/                 # Trained models
-│   ├── model.pkl           # Hybrid ML model
-│   └── scaler.pkl          # Feature scaler
-└── data/                   # Sample data
-    └── sample_data.csv     # Sample transaction data
+│   └── index.html            # 🖥️ Web interface template  
+├── static/  
+│   ├── style.css             # 🎨 Stylesheet  
+│   └── script.js             # ⚙️ JavaScript functionality  
+├── models/                   # 🧠 Trained models  
+│   ├── model.pkl             # 📁 Saved hybrid ML model  
+│   └── scaler.pkl            # 📂 Feature scaler  
+└── data/                     # 🧾 Sample data  
+    └── sample_data.csv       # 📄 Sample transaction dataset
+
 \`\`\`
 
 ## 🔍 Usage
