@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> Credit Card Fraud Detection System</h1>
+            <p>Advanced ML-powered fraud detection using multiple algorithms</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Tab Navigation -->
+            <div class="tab-container">
+                <button class="tab-button active" onclick="openTab(event, 'manual-tab')">
+                    <i class="fas fa-keyboard"></i> Manual Entry
+                </button>
+                <button class="tab-button" onclick="openTab(event, 'csv-tab')">
+                    <i class="fas fa-file-csv"></i> CSV Upload
+                </button>
+            </div>
+
+            <!-- Manual Entry Tab -->
+            <div id="manual-tab" class="tab-content active">
+                <div class="form-container">
+                    <h2>Enter Transaction Details</h2>
+                    <form id="manual-form">
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="time">Time (seconds)</label>
+                                <input type="number" id="time" name="time" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="amount">Amount ($)</label>
+                                <input type="number" id="amount" name="amount" step="0.01" required>
+                            </div>
+                        </div>
+
+                        <h3>PCA Features (V1 - V28)</h3>
+                        <div class="pca-grid">
+                            <!-- Generate V1-V28 inputs -->
+                            <div class="input-group">
+                                <label for="v1">V1</label>
+                                <input type="number" id="v1" name="v1" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v2">V2</label>
+                                <input type="number" id="v2" name="v2" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v3">V3</label>
+                                <input type="number" id="v3" name="v3" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v4">V4</label>
+                                <input type="number" id="v4" name="v4" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v5">V5</label>
+                                <input type="number" id="v5" name="v5" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v6">V6</label>
+                                <input type="number" id="v6" name="v6" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v7">V7</label>
+                                <input type="number" id="v7" name="v7" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v8">V8</label>
+                                <input type="number" id="v8" name="v8" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v9">V9</label>
+                                <input type="number" id="v9" name="v9" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v10">V10</label>
+                                <input type="number" id="v10" name="v10" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v11">V11</label>
+                                <input type="number" id="v11" name="v11" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v12">V12</label>
+                                <input type="number" id="v12" name="v12" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v13">V13</label>
+                                <input type="number" id="v13" name="v13" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v14">V14</label>
+                                <input type="number" id="v14" name="v14" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v15">V15</label>
+                                <input type="number" id="v15" name="v15" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v16">V16</label>
+                                <input type="number" id="v16" name="v16" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v17">V17</label>
+                                <input type="number" id="v17" name="v17" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v18">V18</label>
+                                <input type="number" id="v18" name="v18" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v19">V19</label>
+                                <input type="number" id="v19" name="v19" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v20">V20</label>
+                                <input type="number" id="v20" name="v20" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v21">V21</label>
+                                <input type="number" id="v21" name="v21" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v22">V22</label>
+                                <input type="number" id="v22" name="v22" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v23">V23</label>
+                                <input type="number" id="v23" name="v23" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v24">V24</label>
+                                <input type="number" id="v24" name="v24" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v25">V25</label>
+                                <input type="number" id="v25" name="v25" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v26">V26</label>
+                                <input type="number" id="v26" name="v26" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v27">V27</label>
+                                <input type="number" id="v27" name="v27" step="any" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="v28">V28</label>
+                                <input type="number" id="v28" name="v28" step="any" value="0">
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <button type="submit" class="predict-btn">
+                                <i class="fas fa-search"></i> Predict Transaction
+                            </button>
+                            <button type="button" class="clear-btn" onclick="clearForm()">
+                                <i class="fas fa-eraser"></i> Clear Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CSV Upload Tab -->
+            <div id="csv-tab" class="tab-content">
+                <div class="form-container">
+                    <h2>Upload CSV File</h2>
+                    <div class="upload-area" id="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag and drop your CSV file here or click to browse</p>
+                        <input type="file" id="csv-file" accept=".csv" style="display: none;">
+                        <button type="button" onclick="document.getElementById('csv-file').click()">
+                            Choose File
+                        </button>
+                    </div>
+                    <div class="file-info" id="file-info" style="display: none;">
+                        <p id="file-name"></p>
+                        <button type="button" class="predict-btn" onclick="predictCSV()">
+                            <i class="fas fa-search"></i> Analyze CSV
+                        </button>
+                    </div>
+                    
+                    <div class="csv-format-info">
+                        <h3>Required CSV Format:</h3>
+                        <p>Your CSV file should contain the following columns:</p>
+                        <code>Time, V1, V2, V3, ..., V28, Amount</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" style="display: none;">
+                <h2>Prediction Results</h2>
+                <div id="results-content"></div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
