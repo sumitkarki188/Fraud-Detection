@@ -24,7 +24,7 @@ A comprehensive machine learning-powered web application for detecting fraudulen
 
 ## 🚀 Live Demo
 
-🌐 **Live Application**: [https://credit-card-fraud-detection-m4dr.onrender.com/](https://credit-card-fraud-detection-m4dr.onrender.com/)
+🌐 **Live Application**: [https://credit-card-fraud-detection-m4dr.onrender.com](https://credit-card-fraud-detection-m4dr.onrender.com)
 
 ## 🛠️ Installation & Setup
 
